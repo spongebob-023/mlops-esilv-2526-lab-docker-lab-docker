@@ -1,0 +1,16 @@
+version: '3' 
+services: 
+  back-service: 
+    image: spongebob023/mon-back:latest 
+#   ports: 
+#     - "5000:5000" 
+    environment: 
+      - CURRENT_ENVIRONMENT=dev 
+#   volumes: 
+#     - ./back/logs:/app/logs 
+  front-service: 
+    image: spongebob023/mon-front:latest 
+    ports: 
+      - "8080:80" 
+    environment: 
+      - WS_BACK_URL=http://localhost:5000

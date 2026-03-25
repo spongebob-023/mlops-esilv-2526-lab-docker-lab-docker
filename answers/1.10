@@ -1,0 +1,1 @@
+docker exec -it app-back-service-1 /bin/bash 
